@@ -1,0 +1,19 @@
+@mixin scroll($bgColor, $scrollColor) {
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: $bgColor;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: $bgColor;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $scrollColor;
+  }
+}
+.v-menu__content {
+  @include scroll($while-2, $gray);
+}

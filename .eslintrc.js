@@ -1,0 +1,136 @@
+module.exports = {
+    root: true,
+    env: {
+      browser: true,
+      node: true,
+      'cypress/globals': true,
+    },
+    extends: [
+      '@nuxtjs/eslint-config-typescript',
+      'airbnb-base',
+      'plugin:nuxt/recommended',
+      'plugin:prettier/recommended',
+    ],
+    settings: {
+      'import/resolver': {
+        'babel-module': {
+          extensions: ['.js', '.jsx', '.ts', '.tsx'],
+          alias: {
+            '~': './',
+            '@': './',
+            '~~': './',
+            '@@': './',
+          },
+        },
+      },
+    },
+    plugins: ['vue', 'prettier', 'cypress'],
+    // add your custom rules here
+    rules: {
+      'max-len': 'off',
+      'prettier/prettier': 'error',
+      'vue/v-on-style': ['error', 'shorthand'],
+      'vue/v-bind-style': ['error', 'shorthand'],
+      'vue/html-indent': ['error', 2, { alignAttributesVertically: true }],
+      'vue/valid-v-slot': [
+        'error',
+        {
+          allowModifiers: true,
+        },
+      ],
+    },
+  }
+  module.exports = {
+    env: {
+      browser: true,
+      es2021: true,
+      'cypress/globals': true,
+    },
+    extends: [
+      'eslint:recommended',
+      'plugin:vue/vue3-recommended',
+      'plugin:@typescript-eslint/recommended',
+      'prettier',
+      'airbnb-base',
+      'plugin:import/errors',
+      'plugin:import/warnings',
+      'plugin:import/typescript',
+    ],
+    overrides: [],
+    parser: 'vue-eslint-parser',
+    parserOptions: {
+      parser: '@typescript-eslint/parser',
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+    },
+    plugins: ['vue', '@typescript-eslint', 'vitest', 'cypress'],
+    rules: {
+      indent: ['error', 2, { SwitchCase: 1 }],
+      'object-curly-newline': 'off',
+      'linebreak-style': ['error', 'unix'],
+      quotes: ['error', 'single'],
+      semi: ['error', 'never'],
+      'max-len': ['error', { code: 120, ignorePattern: '\\s+class=.*' }],
+      'import/extensions': [
+        'error',
+        'ignorePackages',
+        {
+          js: 'never',
+          jsx: 'never',
+          ts: 'never',
+          tsx: 'never',
+        },
+      ],
+      'arrow-parens': ['error', 'as-needed'],
+      'no-console': ['error', { allow: ['warn', 'error'] }],
+      'no-use-before-define': 'off',
+      'no-param-reassign': 'off',
+      'no-continue': 'off',
+      'no-shadow': 'off',
+      '@typescript-eslint/no-shadow': ['error'],
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'error',
+      'import/no-relative-packages': 'off',
+      'import/no-extraneous-dependencies': 'off',
+      'vue/multi-word-component-names': [
+        'error',
+        {
+          ignores: [
+            'index',
+            'home',
+            'default',
+            'login',
+            'empty',
+            'blank',
+            'contratos',
+            'historico',
+          ],
+        },
+      ],
+      'cypress/no-assigning-return-values': 'error',
+      'cypress/no-unnecessary-waiting': 'error',
+      'cypress/assertion-before-screenshot': 'warn',
+      'cypress/no-force': 'warn',
+      'cypress/no-async-tests': 'error',
+      'cypress/no-pause': 'error',
+    },
+    settings: {
+      'import/resolver': {
+        typescript: true,
+        node: true,
+      },
+    },
+    globals: {
+      ref: 'readonly',
+      defineNuxtConfig: 'readonly',
+      acceptHMRUpdate: 'readonly',
+      useRuntimeConfig: 'readonly',
+      defineNuxtRouteMiddleware: 'readonly',
+      navigateTo: 'readonly',
+      defineNuxtPlugin: 'readonly',
+      addRouteMiddleware: 'readonly',
+      definePageMeta: 'readonly',
+      useRouter: 'readonly',
+      computed: 'readonly',
+    },
+  }

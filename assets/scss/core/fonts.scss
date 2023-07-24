@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+.mte-typography {
+  &__font--light {
+    font-weight: 300;
+  }
+  &__font--regular {
+    font-weight: 400;
+  }
+  &__font--bold {
+    font-weight: 700;
+  }
+  &__inherit {
+    text-transform: inherit;
+  }
+}
+
+.mte-no-transform {
+  text-transform: none;
+}

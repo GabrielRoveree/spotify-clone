@@ -1,0 +1,51 @@
+@import '../../scss/variables/colors-variables.scss';
+
+.text-color {
+  &--while {
+    color: $while;
+  }
+  &--while1 {
+    color: $while-1;
+  }
+  &--blue0 {
+    color: $blue-0;
+  }
+  &--danger {
+    color: $alert-danger-0;
+  }
+  &--alert-info {
+    color: $alert-info;
+  }
+  &--black0 {
+    color: $black-0;
+  }
+  &--gray {
+    color: $gray;
+  }
+}
+.bg-color {
+  &--success {
+    background-color: $alert-success;
+  }
+  &--primary0 {
+    background-color: $primary-0;
+  }
+  &--primary1 {
+    background-color: $primary-1;
+  }
+  &--alert-info {
+    background-color: $alert-info;
+  }
+  &--gray {
+    background-color: $gray;
+  }
+  &--alert-warning {
+    background-color: $alert-warning;
+  }
+  &--alert-danger0 {
+    background-color: $alert-danger-0;
+  }
+  &--while-2 {
+    background-color: $while-2;
+  }
+}
